@@ -1,0 +1,10 @@
+# Hasil build Maven
+target/
+
+# File log
+*.log
+
+# Pengaturan IDE
+.idea/
+*.iml
+.vscode/
