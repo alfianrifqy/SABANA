@@ -20,7 +20,6 @@ public class LoginPage extends JFrame {
     private JPasswordField txtPassword;
     private JComboBox<String> cmbRole;
 
-    // Palet Warna Modern
     private static final Color BACKGROUND_COLOR = new Color(244, 247, 252);
     private static final Color PRIMARY_COLOR = new Color(13, 71, 161);
     private static final Color TEXT_COLOR = new Color(80, 80, 80);
