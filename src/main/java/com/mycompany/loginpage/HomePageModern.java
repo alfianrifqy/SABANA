@@ -75,7 +75,6 @@ public class HomePageModern extends JFrame {
     }
 
 
-    // --- PERUBAHAN UTAMA ADA DI METODE INI ---
     private JPanel createHeaderPanel() {
         JPanel headerPanel = new JPanel(new BorderLayout(10, 10));
         headerPanel.setBackground(BACKGROUND_COLOR);
@@ -103,16 +102,10 @@ public class HomePageModern extends JFrame {
         locationTextPanel.add(locationLabel);
         leftPanel.add(locationTextPanel);
 
-        // BLOK KODE UNTUK IKON KAMERA DAN LONCENG SUDAH DIHAPUS DARI SINI
-        // JPanel rightPanel = new JPanel(...);
-        // ...
-        
-        headerPanel.add(leftPanel, BorderLayout.CENTER); // Mengubah dari WEST ke CENTER agar rapi
+        headerPanel.add(leftPanel, BorderLayout.CENTER); 
 
         return headerPanel;
     }
-    
-    // --- KODE DI BAWAH INI TIDAK ADA PERUBAHAN ---
 
     private JPanel createFooterPanel() {
         JPanel footerPanel = new JPanel();
