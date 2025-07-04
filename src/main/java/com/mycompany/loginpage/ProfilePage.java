@@ -28,10 +28,10 @@ public class ProfilePage extends JFrame {
         this.userRole = userRole;
 
         setTitle("Profil Pengguna - " + username);
-        setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE); // Hanya tutup jendela ini, bukan aplikasi
+        setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
         setSize(400, 500);
         setLocationRelativeTo(null);
-        setUndecorated(true); // Tampilan modern tanpa border default
+        setUndecorated(true);
 
         JPanel mainPanel = new JPanel(new BorderLayout(10, 10));
         mainPanel.setBackground(BACKGROUND_COLOR);
@@ -102,11 +102,9 @@ public class ProfilePage extends JFrame {
                 JOptionPane.QUESTION_MESSAGE);
         
         if (response == JOptionPane.YES_OPTION) {
-            // Tutup semua jendela yang sedang terbuka
             for (Window window : Window.getWindows()) {
                 window.dispose();
             }
-            // Buka kembali halaman login
             SwingUtilities.invokeLater(() -> new LoginPage().setVisible(true));
         }
     }
