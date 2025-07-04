@@ -22,7 +22,7 @@ public class LoginPage extends JFrame {
 
     // Palet Warna Modern
     private static final Color BACKGROUND_COLOR = new Color(244, 247, 252);
-    private static final Color PRIMARY_COLOR = new Color(13, 71, 161);    // Dark Blue
+    private static final Color PRIMARY_COLOR = new Color(13, 71, 161);
     private static final Color TEXT_COLOR = new Color(80, 80, 80);
     private static final Font MAIN_FONT = new Font("Segoe UI", Font.PLAIN, 14);
     private static final Font TITLE_FONT = new Font("Segoe UI", Font.BOLD, 28);
@@ -46,20 +46,16 @@ public class LoginPage extends JFrame {
         gbc.insets = new Insets(0, 0, 10, 0);
         gbc.anchor = GridBagConstraints.CENTER;
         
-        // --- PERBAIKAN UTAMA DI SINI ---
         ImageIcon logoIcon = loadIcon("/icons/sabana-logo.png", 100, 100);
         JLabel logoLabel;
         if (logoIcon != null) {
-            // Gunakan konstruktor JLabel(Icon) jika gambar ada
             logoLabel = new JLabel(logoIcon);
         } else {
-            // Gunakan konstruktor JLabel(String) jika gambar tidak ada
             logoLabel = new JLabel("SABANA");
             logoLabel.setFont(TITLE_FONT);
             logoLabel.setForeground(PRIMARY_COLOR);
         }
         mainPanel.add(logoLabel, gbc);
-        // --- AKHIR DARI PERBAIKAN ---
 
         // 2. Judul
         gbc.gridy++;
@@ -69,7 +65,6 @@ public class LoginPage extends JFrame {
         titleLabel.setForeground(TEXT_COLOR);
         mainPanel.add(titleLabel, gbc);
 
-        // Reset gbc untuk field input
         gbc.fill = GridBagConstraints.HORIZONTAL;
         gbc.weightx = 1.0;
         gbc.insets = new Insets(5, 0, 5, 0);
