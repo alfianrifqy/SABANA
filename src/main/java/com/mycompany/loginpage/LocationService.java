@@ -15,8 +15,6 @@ import java.net.http.HttpRequest;
 import java.net.http.HttpResponse;
 
 public class LocationService {
-
-    // Kita akan menggunakan layanan gratis dari ip-api.com
     private static final String API_URL = "http://ip-api.com/json";
 
     public static String detectLocation() {
@@ -31,15 +29,12 @@ public class LocationService {
             HttpResponse<String> response = client.send(request, HttpResponse.BodyHandlers.ofString());
 
             if (response.statusCode() == 200) {
-                // Parsing response JSON
                 JSONObject jsonObject = new JSONObject(response.body());
                 
-                // Cek status, jika gagal, kembalikan pesan error
                 if ("fail".equals(jsonObject.optString("status"))) {
                     return "Gagal mendeteksi: " + jsonObject.optString("message");
                 }
 
-                // Ambil data lokasi dan gabungkan
                 String city = jsonObject.optString("city", "Tidak diketahui");
                 String region = jsonObject.optString("regionName", "Tidak diketahui");
                 String country = jsonObject.optString("country", "Tidak diketahui");
