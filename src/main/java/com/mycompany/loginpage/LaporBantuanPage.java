@@ -58,22 +58,21 @@ public class LaporBantuanPage extends JFrame {
         autoDetectLocation();
     }
 
-    // --- METODE HEADER YANG TELAH DIPERBARUI ---
     private JPanel createHeader(String title) {
         JPanel headerPanel = new JPanel(new BorderLayout());
         headerPanel.setBackground(BACKGROUND_COLOR);
         headerPanel.setBorder(new EmptyBorder(20, 15, 10, 15));
 
-        // Tombol Kembali di kiri (WEST)
+        // Tombol Kembali di kiri
         JButton backButton = new JButton("< Kembali");
         backButton.setFont(new Font("Segoe UI", Font.BOLD, 14));
         backButton.setForeground(Color.DARK_GRAY);
         backButton.setContentAreaFilled(false);
         backButton.setBorderPainted(false);
         backButton.setCursor(new Cursor(Cursor.HAND_CURSOR));
-        backButton.addActionListener(e -> this.dispose()); // Aksi: tutup jendela ini
+        backButton.addActionListener(e -> this.dispose());
         
-        // Judul di tengah (CENTER)
+        // Judul di tengah
         JLabel titleLabel = new JLabel(title);
         titleLabel.setFont(new Font("Arial", Font.BOLD, 24));
         titleLabel.setHorizontalAlignment(SwingConstants.CENTER);
